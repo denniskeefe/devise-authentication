@@ -1,4 +1,5 @@
 class FriendsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /friends
   # GET /friends.json
   def index
